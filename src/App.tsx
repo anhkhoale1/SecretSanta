@@ -21,10 +21,10 @@ function App() {
 
     const [stage, setStage] = useState(STAGE_REGISTER_PERSONS)
     if (stage === STAGE_REGISTER_PERSONS) {
-        return (<RegisterPersonPage />)
+        return (<RegisterPersonPage prepareSendingEmail={prepareSendingEmail}/>)
     }
 
-    return (<FinishSendEmail />)
+    return (<FinishSendEmail persons={persons}/>)
 }
 
 export default App;

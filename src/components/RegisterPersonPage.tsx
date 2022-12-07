@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import {Person} from "../Person";
-import logo from "../secret_santa.png";
 import {Box, Button, Snackbar, TextField} from "@mui/material";
 import {AccountCircle, AddCircleRounded} from "@mui/icons-material";
 import DeletableChips from "./DeletableChips";
@@ -21,7 +20,6 @@ export function RegisterPersonPage( { prepareSendingEmail }: { prepareSendingEma
     return (
         <div className="App">
             <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
 
                 <h1 className="text-santa">Secret Santa</h1>
 
