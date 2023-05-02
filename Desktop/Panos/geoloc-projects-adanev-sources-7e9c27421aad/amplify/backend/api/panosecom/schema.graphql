@@ -1,0 +1,65 @@
+type Store @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  userlog: String
+  mdps: String
+  adress: String
+  tel_contact: String
+  email_contact: String
+}
+
+type Type @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  Marques: [Marque] @hasMany(indexName: "byType", fields: ["id"])
+  suppliersID: ID @index(name: "bySuppliers")
+}
+
+type Suppliers @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  email: String
+  password: String
+  usersID: ID! @index(name: "byUsers")
+  Types: [Type] @hasMany(indexName: "bySuppliers", fields: ["id"])
+  Marques: [Marque] @hasMany(indexName: "bySuppliers", fields: ["id"])
+  Products: [Products] @hasMany(indexName: "bySuppliers", fields: ["id"])
+}
+
+type Marque @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  slug: String
+  typeID: ID @index(name: "byType")
+  Products: [Products] @hasMany(indexName: "byMarque", fields: ["id"])
+  suppliersID: ID @index(name: "bySuppliers")
+}
+
+type Products @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  description: String
+  price: String
+  slug: String
+  images: String
+  badges: String
+  rating: String
+  reviews: String
+  availability: String
+  compatibility: String
+  attributes: String
+  marqueID: ID @index(name: "byMarque")
+  suppliersID: ID @index(name: "bySuppliers")
+  type: String
+  marque: String
+  Affiliate: String
+}
+
+type Users @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  email: String
+  password: String
+  Suppliers: [Suppliers] @hasMany(indexName: "byUsers", fields: ["id"])
+}
+ 

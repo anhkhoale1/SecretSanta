@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-panosecom-dev-75816-authRole",
+      "UnauthRoleArn": "arn:aws:iam::035186360136:role/amplify-panosecom-dev-75816-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::035186360136:role/amplify-panosecom-dev-75816-authRole",
+      "Region": "eu-west-3",
+      "DeploymentBucketName": "amplify-panosecom-dev-75816-deployment",
+      "UnauthRoleName": "amplify-panosecom-dev-75816-unauthRole",
+      "StackName": "amplify-panosecom-dev-75816",
+      "StackId": "arn:aws:cloudformation:eu-west-3:035186360136:stack/amplify-panosecom-dev-75816/780379a0-ce07-11ed-b2e9-0e6438852732",
+      "AmplifyAppId": "d24y9bsfxbyqe5"
+    },
+    "categories": {
+      "auth": {
+        "panos": {}
+      },
+      "storage": {
+        "panos": {}
+      },
+      "api": {
+        "panosecom": {}
+      },
+      "hosting": {
+        "S3AndCloudFront": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "resourceName": "panos",
+  "policyUUID": "44136a66",
+  "bucketName": "panosecomdd3283cc436d45e58ec2ceb305f13b77",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
